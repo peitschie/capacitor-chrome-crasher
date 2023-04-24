@@ -11,9 +11,25 @@ npx cap sync
 
 ## API
 
-<docgen-index></docgen-index>
+<docgen-index>
+
+* [`loadChromeUrl(...)`](#loadchromeurl)
+
+</docgen-index>
 
 <docgen-api>
-<!-- run docgen to generate docs from the source -->
-<!-- More info: https://github.com/ionic-team/capacitor-docgen -->
+<!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
+
+### loadChromeUrl(...)
+
+```typescript
+loadChromeUrl(options?: { url: string; } | undefined) => void
+```
+
+| Param         | Type                          |
+| ------------- | ----------------------------- |
+| **`options`** | <code>{ url: string; }</code> |
+
+--------------------
+
 </docgen-api>

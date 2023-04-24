@@ -8,15 +8,9 @@ import com.getcapacitor.annotation.CapacitorPlugin;
 
 @CapacitorPlugin(name = "ChromeCrasher")
 public class ChromeCrasherPlugin extends Plugin {
-
-    private ChromeCrasher implementation = new ChromeCrasher();
-
-    @PluginMethod
-    public void echo(PluginCall call) {
-        String value = call.getString("value");
-
-        JSObject ret = new JSObject();
-        ret.put("value", implementation.echo(value));
-        call.resolve(ret);
+    @PluginMethod(returnType = PluginMethod.RETURN_NONE)
+    public void loadChromeUrl(PluginCall call) {
+        String value = call.getString("url", "crash");
+        bridge.executeOnMainThread(() -> bridge.getWebView().loadUrl("chrome://" + value));
     }
 }
